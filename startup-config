@@ -1,0 +1,9 @@
+aaa authentication policy local allow-nopassword-remote-login
+!
+username admin privilege 15 role network-admin nopassword
+aaa authorization exec default local
+aaa authorization commands all default local
+!
+management api http-commands
+   no shutdown
+!   

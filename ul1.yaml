@@ -1,0 +1,44 @@
+name: ul1
+
+topology:
+  kinds:
+    ceos:
+      image: ceosimage:latest
+      exec:
+        - sleep 10
+        - FastCli -p 15 -c 'security pki key generate rsa 4096 eAPI.key'
+        - FastCli -p 15 -c 'security pki certificate generate self-signed eAPI.crt key eAPI.key generate rsa 4096 validity 30000 parameters common-name eAPI'
+    linux:
+      image: alpine-host
+  nodes:
+    ceos1:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.2
+    ceos2:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.3
+    ceos3:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.4
+    ceos4:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.5
+    ceos5:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.6
+
+  links:
+    - endpoints: ["ceos2:eth4", "ceos5:eth2"]
+    - endpoints: ["ceos1:eth4", "ceos5:eth1"]
+    - endpoints: ["ceos1:eth3", "ceos2:eth3"]
+    - endpoints: ["ceos3:eth1", "ceos1:eth1"]
+    - endpoints: ["ceos4:eth1", "ceos1:eth2"]
+    - endpoints: ["ceos3:eth2", "ceos2:eth1"]
+    - endpoints: ["ceos4:eth2", "ceos2:eth2"]
+    - endpoints: ["ceos3:eth3", "ceos4:eth3"]
+    - endpoints: ["ceos3:eth4", "ceos4:eth4"]
+
+mgmt:
+  network: ceos_clab                
+  ipv4-subnet: 172.100.100.0/24       
+  ipv6-subnet: 2001:172:100:100::/80
