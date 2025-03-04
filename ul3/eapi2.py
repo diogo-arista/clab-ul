@@ -23,7 +23,7 @@ device = args.hostname
 username = "admin"
 
 # Create JSON-RPC server connection
-sw = jsonrpclib.Server(f"https://Diogo.SerranoMendes:{password}@{device}/command-api")
+sw = jsonrpclib.Server(f"https://{username}:{password}@{device}/command-api")
 
 # Execute the command and print the results
 result = sw.runCmds(1, ["show ip interface brief"])
