@@ -21,7 +21,6 @@ topology:
       mgmt-ipv4: 172.100.100.3
   links:
     - endpoints: ["ceos1:eth1", "ceos2:eth1"]
-    - endpoints: ["ceos1:eth2", "ceos2:eth2"] 
 
 mgmt:
   network: ceos_clab                
