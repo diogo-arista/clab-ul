@@ -1,0 +1,28 @@
+name: ul2
+
+topology:
+  kinds:
+    ceos:
+      image: ceosimage:latest
+      startup-config: startup-config-v2
+  nodes:
+    ceos1:
+      kind: ceos
+      binds:
+        - /home/student/cEOS-lab/avd-cEOS-Lab/labs/UL-topologies:/mnt/linuxvm:rw
+      mgmt-ipv4: 172.100.100.2
+      ports:
+        - 4431:443
+        - 221:22 
+        - 60301:6030/tcp
+        - 60201:6020 
+    ceos2:
+      kind: ceos
+      mgmt-ipv4: 172.100.100.3
+  links:
+    - endpoints: ["ceos1:eth1", "ceos2:eth1"]
+    - endpoints: ["ceos1:eth2", "ceos2:eth2"] 
+
+mgmt:
+  network: ceos_clab                
+  ipv4-subnet: 172.100.100.0/24
