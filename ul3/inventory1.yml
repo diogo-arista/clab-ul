@@ -1,0 +1,16 @@
+all:
+  children:
+    leafs:
+      hosts:
+        172.100.100.2:
+        172.100.100.3:
+  vars:
+    ansible_connection: httpapi
+    ansible_network_os: eos
+    ansible_user: admin
+    ansible_password: admin
+    ansible_become: yes
+    ansible_become_method: enable
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false
+    ansible_httpapi_ciphers: AES256-SHA:DHE-RSA-AES256-SHA:AES128-SHA:DHE-RSA-AES128-SHA

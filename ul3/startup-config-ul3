@@ -7,3 +7,6 @@ aaa authorization commands all default local
 management api http-commands
    no shutdown
 !
+management api gnmi
+   transport grpc MGMT
+   no shutdown

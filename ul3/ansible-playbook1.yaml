@@ -1,0 +1,13 @@
+---
+- name: Collect IP address of all interfaces
+  hosts: leafs
+  gather_facts: no
+  tasks:
+    - name: Get IP address of all interfaces
+      eos_command:
+        commands: "show ip interface brief"
+      register: ips
+
+    - name: Print IP address of all interfaces
+      debug:
+        msg: "{{ ips.stdout_lines }}"
