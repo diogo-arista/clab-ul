@@ -4,6 +4,7 @@ topology:
   kinds:
     ceos:
       image: ceosimage:4.33.1F
+      startup-config: startup-config-ul3
   nodes:
     ceos1:
       kind: ceos
