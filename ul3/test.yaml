@@ -3,7 +3,7 @@ name: test
 topology:
   kinds:
     ceos:
-      image: ceosimage:latest
+      image: ceosimage:4.33.1F
   nodes:
     ceos1:
       kind: ceos
