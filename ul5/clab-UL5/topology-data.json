@@ -1,0 +1,294 @@
+{
+  "name": "UL5",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-79c7473a6820",
+        "ipv4-subnet": "172.100.100.0/24",
+        "ipv4-gw": "172.100.100.1",
+        "ipv6-gw": "fe80::42:84ff:fe03:d0da",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "Controller": {
+      "index": "0",
+      "shortname": "Controller",
+      "longname": "Controller",
+      "fqdn": "Controller.UL5.io",
+      "group": "",
+      "labdir": "/home/student/clab-ul/ul5/clab-UL5/Controller",
+      "kind": "ceos",
+      "image": "ceosimage:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:80:bd:f7",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79c7473a6820",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/student/clab-ul/ul5/clab-UL5/Controller",
+        "clab-node-longname": "Controller",
+        "clab-node-name": "Controller",
+        "clab-node-type": "",
+        "clab-owner": "student",
+        "clab-topo-file": "/home/student/clab-ul/ul5/topology.yaml",
+        "containerlab": "UL5"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 2205,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 2205,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "R1": {
+      "index": "1",
+      "shortname": "R1",
+      "longname": "R1",
+      "fqdn": "R1.UL5.io",
+      "group": "",
+      "labdir": "/home/student/clab-ul/ul5/clab-UL5/R1",
+      "kind": "ceos",
+      "image": "ceosimage:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:8c:91:c5",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79c7473a6820",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/student/clab-ul/ul5/clab-UL5/R1",
+        "clab-node-longname": "R1",
+        "clab-node-name": "R1",
+        "clab-node-type": "",
+        "clab-owner": "student",
+        "clab-topo-file": "/home/student/clab-ul/ul5/topology.yaml",
+        "containerlab": "UL5"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 2204,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 2204,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "SW1": {
+      "index": "2",
+      "shortname": "SW1",
+      "longname": "SW1",
+      "fqdn": "SW1.UL5.io",
+      "group": "",
+      "labdir": "/home/student/clab-ul/ul5/clab-UL5/SW1",
+      "kind": "ceos",
+      "image": "ceosimage:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:e8:4c:76",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79c7473a6820",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/student/clab-ul/ul5/clab-UL5/SW1",
+        "clab-node-longname": "SW1",
+        "clab-node-name": "SW1",
+        "clab-node-type": "",
+        "clab-owner": "student",
+        "clab-topo-file": "/home/student/clab-ul/ul5/topology.yaml",
+        "containerlab": "UL5"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 2201,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 2201,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "SW2": {
+      "index": "3",
+      "shortname": "SW2",
+      "longname": "SW2",
+      "fqdn": "SW2.UL5.io",
+      "group": "",
+      "labdir": "/home/student/clab-ul/ul5/clab-UL5/SW2",
+      "kind": "ceos",
+      "image": "ceosimage:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:a5:5b:d9",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79c7473a6820",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/student/clab-ul/ul5/clab-UL5/SW2",
+        "clab-node-longname": "SW2",
+        "clab-node-name": "SW2",
+        "clab-node-type": "",
+        "clab-owner": "student",
+        "clab-topo-file": "/home/student/clab-ul/ul5/topology.yaml",
+        "containerlab": "UL5"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 2202,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 2202,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "SW3": {
+      "index": "4",
+      "shortname": "SW3",
+      "longname": "SW3",
+      "fqdn": "SW3.UL5.io",
+      "group": "",
+      "labdir": "/home/student/clab-ul/ul5/clab-UL5/SW3",
+      "kind": "ceos",
+      "image": "ceosimage:4.33.2F",
+      "mgmt-net": "",
+      "mgmt-intf": "Management0",
+      "mgmt-ipv4-address": "172.100.100.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "00:1c:73:b5:85:16",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-79c7473a6820",
+        "clab-node-group": "",
+        "clab-node-kind": "ceos",
+        "clab-node-lab-dir": "/home/student/clab-ul/ul5/clab-UL5/SW3",
+        "clab-node-longname": "SW3",
+        "clab-node-name": "SW3",
+        "clab-node-type": "",
+        "clab-owner": "student",
+        "clab-topo-file": "/home/student/clab-ul/ul5/topology.yaml",
+        "containerlab": "UL5"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "0.0.0.0",
+          "host-port": 2203,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "::",
+          "host-port": 2203,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:de:d8:e4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "SW1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ab:21:ee",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:d8:53:8f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "SW2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:af:1a:86",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "R1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:55:81:fa",
+        "peer": "z"
+      },
+      "z": {
+        "node": "SW3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:9e:94:c5",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "Controller",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:7c:53:e4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "R1",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:fe:84:0e",
+        "peer": "a"
+      }
+    }
+  ]
+}
