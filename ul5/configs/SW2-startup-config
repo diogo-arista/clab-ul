@@ -1,0 +1,69 @@
+! Startup-config last modified at Fri Mar 28 21:19:59 2025 by admin
+! device: SW2 (cEOSLab, EOS-4.33.2F-40307034.mekongceoslabarm (engineering build))
+!
+no aaa root
+aaa authentication policy local allow-nopassword-remote-login
+!
+username admin privilege 15 role network-admin nopassword
+!
+management api http-commands
+   protocol https ssl profile eAPI
+   no shutdown
+!
+no service interface inactive port-id allocation disabled
+!
+transceiver qsfp default-mode 4x10G
+!
+service routing protocols model multi-agent
+!
+hostname SW2
+!
+spanning-tree mode mstp
+!
+system l1
+   unsupported speed action error
+   unsupported error-correction action error
+!
+vlan 10
+!
+aaa authorization exec default local
+aaa authorization commands all default local
+!
+interface Ethernet1
+   no switchport
+   ip address 10.2.4.2/24
+!
+interface Ethernet2
+   switchport access vlan 10
+!
+interface Loopback0
+   ip address 2.2.2.2/32
+!
+interface Management0
+   ip address 172.100.100.8/24
+!
+interface Vlan10
+   ip address virtual 10.10.10.1/24
+!
+interface Vxlan1
+   vxlan source-interface Loopback0
+   vxlan udp-port 4789
+   vxlan vlan 10 vni 1010
+!
+ip virtual-router mac-address ca:fe:ca:fe:ca:fe
+!
+ip routing
+!
+router multicast
+   ipv4
+      software-forwarding kernel
+   !
+   ipv6
+      software-forwarding kernel
+!
+router ospf 1
+   network 2.2.2.2/32 area 0.0.0.0
+   network 10.0.0.0/8 area 0.0.0.0
+   max-lsa 12000
+!
+end
