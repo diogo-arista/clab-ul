@@ -10,28 +10,28 @@ topology:
   nodes:
     R1:
       kind: ceos
-      ports:
-        - "2204:22"
+#      ports:
+#        - "2204:22"
       startup-config: ./configs/R1-startup-config 
     Controller:
       kind: ceos
-      ports:
-        - "2205:22"
+#      ports:
+#        - "2205:22"
       startup-config: ./configs/Controller-startup-config
     SW1:
       kind: ceos
-      ports:
-        - "2201:22"
+#      ports:
+#        - "2201:22"
       startup-config: ./configs/SW1-startup-config
     SW2:
       kind: ceos
-      ports:
-        - "2202:22"
+#      ports:
+#        - "2202:22"
       startup-config: ./configs/SW2-startup-config
     SW3:
       kind: ceos
-      ports:
-        - "2203:22"
+#      ports:
+#        - "2203:22"
       startup-config: ./configs/SW3-startup-config 
     host1:
       kind: linux 
