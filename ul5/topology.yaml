@@ -34,11 +34,11 @@ topology:
 #      ports:
 #        - "2202:22"
       startup-config: ./configs/SW2-startup-config
-    SW3:
-      kind: ceos
+#    SW3:
+#      kind: ceos
 #      ports:
 #        - "2203:22"
-      startup-config: ./configs/SW3-startup-config 
+#      startup-config: ./configs/SW3-startup-config 
     host1:
       kind: linux 
       env:
@@ -53,12 +53,12 @@ topology:
         IPV4: 10.10.10.102/24
         STATIC_ROUTE: 10.0.0.0/8
         GW: 10.10.10.1
-    host3:
-      kind: linux 
-      env:
-        IPV4: 10.10.10.103/24
-        STATIC_ROUTE: 10.0.0.0/8
-        GW: 10.10.10.1
+#    host3:
+#      kind: linux 
+#      env:
+#        IPV4: 10.10.10.103/24
+#        STATIC_ROUTE: 10.0.0.0/8
+#        GW: 10.10.10.1
   links:
     - endpoints:
         - R1:eth1
