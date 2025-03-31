@@ -7,7 +7,8 @@ aaa authentication policy local allow-nopassword-remote-login
 username admin privilege 15 role network-admin nopassword
 !
 management api http-commands
-   protocol https ssl profile eAPI
+   protocol https
+   protocol http
    no shutdown
 !
 no service interface inactive port-id allocation disabled
