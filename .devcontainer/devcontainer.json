@@ -4,9 +4,6 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:1": {}
   },
-  "mounts": [
-    "source=/var/run/docker-host.sock,target=/var/run/docker.sock,type=bind"
-  ],
   "privileged": true,
   "postCreateCommand": "/bin/bash /workspaces/clab-ul/.devcontainer/setup.sh",
   "customizations": {
