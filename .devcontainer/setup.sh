@@ -22,6 +22,12 @@ gdown --fuzzy "https://drive.google.com/uc?id=1b8xp2blIO2a7YAFfy5pqvYXiD79ykBT1"
 echo "[INFO] Importing Docker image..."
 docker import cEOS-lab-4.33.2F.tar.xz ceosimage:4.33.2F
 
+# Wait for Docker to be ready
+log "Waiting for Docker to be available..."
+until docker info >/dev/null 2>&1; do
+    sleep 1
+done
+
 log "Pulling Arista host-ubuntu image..."
 docker pull ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0
 
