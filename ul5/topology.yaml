@@ -66,15 +66,15 @@ topology:
     - endpoints:
         - R1:eth2
         - SW2:eth1
-    - endpoints:
-        - R1:eth3
-        - SW3:eth1
+ #   - endpoints:
+ #       - R1:eth3
+#        - SW3:eth1
     - endpoints:
         - Controller:eth1
         - R1:eth4
     - endpoints: ["host1:eth1","SW1:eth2"]    
     - endpoints: ["host2:eth1","SW2:eth2"]
-    - endpoints: ["host3:eth1","SW3:eth2"]         
+#    - endpoints: ["host3:eth1","SW3:eth2"]         
 mgmt:
   network: clab
   ipv4-subnet: 172.100.100.0/24
