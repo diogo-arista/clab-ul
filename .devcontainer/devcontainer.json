@@ -1,7 +1,13 @@
 {
-  "name": "Network Lab",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // or any base image you want
-  "features": {},
+  "name": "Network Lab with Docker",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "mounts": [
+    "source=/var/run/docker-host.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "privileged": true,
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
     "vscode": {
