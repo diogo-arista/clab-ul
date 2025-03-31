@@ -1,0 +1,11 @@
+{
+  "name": "Network Lab",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",  // or any base image you want
+  "features": {},
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}
