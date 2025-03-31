@@ -8,7 +8,7 @@
     "source=/var/run/docker-host.sock,target=/var/run/docker.sock,type=bind"
   ],
   "privileged": true,
-  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postCreateCommand": "/bin/bash /workspaces/clab-ul/.devcontainer/setup.sh",
   "postStartCommand": "docker pull ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
   "customizations": {
     "vscode": {
