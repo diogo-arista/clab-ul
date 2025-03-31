@@ -4,6 +4,10 @@ topology:
   kinds:
     ceos:
       image: ceosimage:4.33.2F
+      exec:
+        - sleep 20
+        - FastCli -p 15 -c 'security pki key generate rsa 4096 eAPI.key'
+        - FastCli -p 15 -c 'security pki certificate generate self-signed eAPI.crt key eAPI.key generate rsa 4096 validity 30000 parameters common-name eAPI'
 #      startup-config: ./configs/default.cfg
 #      memory: 1g
     linux:
