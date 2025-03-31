@@ -9,6 +9,7 @@
   ],
   "privileged": true,
   "postCreateCommand": "bash .devcontainer/setup.sh",
+  "postStartCommand": "docker pull ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.0",
   "customizations": {
     "vscode": {
       "extensions": []
