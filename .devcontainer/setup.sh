@@ -25,7 +25,7 @@ docker import cEOS-lab-4.33.2F.tar.xz ceosimage:4.33.2F
 # Wait for Docker to be ready
 log "Waiting for Docker to be available..."
 until docker info >/dev/null 2>&1; do
-    sleep 1
+    sleep 10
 done
 
 log "Pulling Arista host-ubuntu image..."
