@@ -1,0 +1,29 @@
+name: UL6
+prefix: ""
+topology:
+  kinds:
+    ceos: 
+      image: ceosimage:4.33.2F
+  nodes:
+    r1:
+      kind: ceos
+      startup-config: configs/r1.cfg
+    r2:
+      kind: ceos
+      startup-config: configs/r2.cfg
+    r3:
+      kind: ceos
+      startup-config: configs/r3.cfg
+    vRR:
+      kind: ceos
+      startup-config: configs/vrr.cfg
+  links:
+    - endpoints:
+        - r1:eth1
+        - r2:eth1
+    - endpoints:
+        - r2:eth2
+        - r3:eth1
+    - endpoints:
+        - r2:eth3
+        - vRR:eth1
