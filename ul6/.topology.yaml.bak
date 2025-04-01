@@ -19,8 +19,10 @@ topology:
       startup-config: configs/vrr.cfg
     External1:
       kind: ceos
+      startup-config: configs/External1.cfg
     External2:
       kind: ceos
+      startup-config: configs/External2.cfg
   links:
     - endpoints:
         - r1:eth1
