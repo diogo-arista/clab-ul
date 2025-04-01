@@ -22,7 +22,7 @@ topology:
       startup-config: configs/External1.cfg
     External2:
       kind: ceos
-      startup-config: configs/External1.cfg
+      startup-config: configs/External2.cfg
   links:
     - endpoints:
         - r1:eth1
