@@ -18,6 +18,9 @@ python3 -m pip install --no-cache-dir gdown
 echo "[INFO] Downloading cEOS image from Google Drive..."
 gdown --fuzzy "https://drive.google.com/uc?id=1b8xp2blIO2a7YAFfy5pqvYXiD79ykBT1"
 
+# Install tcpdump
+sudo apt-get install -y tcpdump
+
 # Import Docker image
 echo "[INFO] Importing Docker image..."
 docker import cEOS-lab-4.33.2F.tar.xz ceosimage:4.33.2F
