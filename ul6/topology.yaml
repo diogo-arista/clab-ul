@@ -17,6 +17,10 @@ topology:
     vRR:
       kind: ceos
       startup-config: configs/vrr.cfg
+    External1:
+      kind: ceos
+    External2:
+      kind: ceos
   links:
     - endpoints:
         - r1:eth1
@@ -27,3 +31,9 @@ topology:
     - endpoints:
         - r2:eth3
         - vRR:eth1
+    - endpoints:
+        - External1:eth1
+        - r1:eth2
+    - endpoints:
+        - External2:eth1
+        - r3:eth2
