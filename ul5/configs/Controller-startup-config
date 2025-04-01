@@ -29,10 +29,13 @@ aaa authorization exec default local
 aaa authorization commands all default local
 !
 interface Ethernet1
+   no switchport
+   ip address 10.4.5.5/24
 !
 interface Management0
    ip address 172.100.100.5/24
 !
+ip route 0/0 10.4.5.4
 no ip routing
 !
 router multicast
