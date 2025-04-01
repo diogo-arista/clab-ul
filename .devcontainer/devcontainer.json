@@ -8,7 +8,7 @@
   "postCreateCommand": "/bin/bash /workspaces/clab-ul/.devcontainer/setup.sh",
   "customizations": {
     "vscode": {
-      "extensions": ["containerlab.containerlab-vscode"]
+      "extensions": ["srl-labs.vscode-containerlab"]
     }
   }
 }
